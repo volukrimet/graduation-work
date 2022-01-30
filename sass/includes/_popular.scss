@@ -1,5 +1,8 @@
 .popular {
     padding-top: 8.75rem;
+    @include tablet {
+        padding-top: 4rem;
+    }
     &__text {
         padding: 0 .75rem;
     }

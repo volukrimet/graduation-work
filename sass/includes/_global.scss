@@ -40,6 +40,9 @@ ul {
     }
     &-book {
         padding: .875rem 2.1875rem;
+        @include tablet {
+            display: none;
+        }
     }
     &-explore {
         padding: 1.0625rem 2.875rem;

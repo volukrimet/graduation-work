@@ -1,5 +1,8 @@
 .blog {
     padding-top: 8.75rem;
+    @include tablet {
+        padding-top: 4rem;
+    }
     padding-bottom: 8.875rem;
     &__content {
         display: grid;

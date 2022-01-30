@@ -22,6 +22,14 @@
 }
 
 .nav {
+    &__button-book {
+        display: none;
+        @include tablet {
+            display: block;
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+    }
     z-index: 10;
     display: flex;
     justify-content: space-between;
@@ -72,6 +80,7 @@
         @include laptop {
             margin: 0 auto;
             margin-bottom: 1.875rem;
+            font-size: 2.8rem;
         }
     }
     &__sub {
