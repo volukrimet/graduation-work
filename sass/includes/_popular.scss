@@ -1,0 +1,53 @@
+.popular {
+    padding-top: 8.75rem;
+    &__text {
+        padding: 0 .75rem;
+    }
+}
+
+.locs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    @include laptop {
+        display: block;
+        padding: 0 4rem;
+    }
+    @include tablet {
+        padding: 0;
+    }
+}
+
+.loc {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--img-radius);
+    &__img {
+        width: 100%;
+        margin-bottom: 2.1875rem;
+    }
+    &__title {
+        font-size: 1.5rem;
+        font-family: 'Gelasio';
+        margin-bottom: .625rem;
+        text-transform: capitalize;
+    }
+    &__sub {
+        font-size: 1.125rem;
+        font-family: 'Roboto';
+        opacity: 0.6;
+        margin-bottom: 2.0625rem;
+    }
+    &:hover {
+        transform: scale(1.05);
+        transition-duration: .5s;
+    }
+    @include laptop {
+        margin-bottom: 3rem;
+        padding-bottom: 2.5rem;
+        border-radius: 22px;
+         :last-child {
+            margin-bottom: 0;
+        }
+    }
+}

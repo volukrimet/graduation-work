@@ -1,0 +1,109 @@
+.footer {
+    padding: 75px 0;
+    background-color: rgba(38, 148, 153, 0.04);
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include laptop {
+            flex-direction: column;
+        }
+    }
+    &__link {
+        text-transform: capitalize;
+        font-weight: 700;
+        letter-spacing: 0.06rem;
+        font-family: 'Roboto';
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+        @include laptop {
+            text-align: center;
+        }
+    }
+    &__elem {
+        width: 100%;
+        @include laptop {
+            margin: 0 auto;
+            padding: 0 2rem;
+            margin-bottom: 2rem;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.contact {
+    &__text {
+        display: block;
+        margin-top: 2.5rem;
+        margin-bottom: .625rem;
+        font-family: 'Roboto';
+        font-size: 1rem;
+        @include laptop {
+            text-align: center;
+        }
+    }
+    &__email {
+        font-family: 'Roboto';
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 1.25rem;
+        @include laptop {
+            text-align: center;
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__icon {
+        margin-right: 1.5rem;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    @include laptop {
+        justify-content: center;
+    }
+}
+
+.subscribe {
+    &__text {
+        display: block;
+        text-transform: uppercase;
+        font-family: 'Roboto';
+        letter-spacing: 0.06rem;
+        font-weight: 700;
+        margin-bottom: 2.625rem;
+        @include laptop {
+            margin-bottom: 1rem;
+        }
+    }
+    &__form {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include laptop {
+            width: 100%;
+            align-items: center;
+        }
+        @include tablet {
+            display: block;
+        }
+    }
+}
+
+.input-email {
+    @include laptop {
+        width: 75%;
+    }
+    @include tablet {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    margin-right: 1rem;
+    padding: .625rem 1rem;
+}

@@ -1,0 +1,102 @@
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url('../img/header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 1000px;
+    &__upper {
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include laptop {
+            padding: 2rem 2rem 0 2rem;
+        }
+        @include tablet {
+            padding: 2rem 0 0 2rem;
+        }
+    }
+    @include desktop {
+        padding: 0 2rem;
+    }
+}
+
+.nav {
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include laptop {
+        @include pos-overlay;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    &.is-active {
+        display: flex;
+        transform: translatey(0) rotateX(0);
+    }
+    &__link {
+        color: #fff;
+        text-transform: capitalize;
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 1.125rem;
+        margin-left: 2rem;
+        &:first-child {
+            margin: 0;
+            @include laptop {
+                margin-bottom: 1rem;
+            }
+        }
+        @include laptop {
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.hero {
+    margin-top: 13.25rem;
+    &__text {
+        display: block;
+        max-width: 800px;
+        color: #fff;
+        font-family: 'Gelasio';
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 4rem;
+        text-transform: capitalize;
+        margin-bottom: 1.875rem;
+        @include laptop {
+            margin: 0 auto;
+            margin-bottom: 1.875rem;
+        }
+    }
+    &__sub {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 1.125rem;
+        color: #fff;
+        opacity: 0.6;
+        display: block;
+        max-width: 500px;
+        margin-bottom: 2.5rem;
+        @include laptop {
+            margin: 0 auto;
+            margin-bottom: 2.5rem;
+        }
+    }
+    @include laptop {
+        text-align: center;
+    }
+}
+
+.hamburger {
+    display: none;
+    @include laptop {
+        display: block;
+        z-index: 100;
+    }
+}
